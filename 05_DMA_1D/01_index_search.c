@@ -8,7 +8,7 @@ int main()
     printf("Enter number of Elements to insert =");
     scanf("%d",&n);
 
-    ptr=(int*)malloc(n*sizeof(int));
+    ptr=(int)malloc(n*sizeof(int));
 
     search = (int*)malloc(sizeof(int));
 
@@ -41,6 +41,14 @@ int main()
     {
         printf("\nElement not Found\n");
     }
+
+    free(ptr);
+
+    free(search);
+
+    search =NULL;
+
+    ptr =NULL;
 
 
     return 0;
